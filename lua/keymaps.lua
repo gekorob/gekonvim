@@ -35,9 +35,18 @@ vim.keymap.set('n', '<S-h>', 'gT', { desc = 'Navigate to Prev Tab' })
 vim.keymap.set('n', '<S-l>', 'gt', { desc = 'Navigate to Next Tab' })
 vim.keymap.set('n', '<S-t>', ':tabnew<CR>', { desc = 'Create new Tab' })
 
+--
+-- Disable mouse movements
+--
+vim.keymap.set('', '<up>', '<nop>', { noremap = true })
+vim.keymap.set('', '<down>', '<nop>', { noremap = true })
+vim.keymap.set('i', '<up>', '<nop>', { noremap = true })
+vim.keymap.set('i', '<down>', '<nop>', { noremap = true })
+
+vim.opt.mouse = ''
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
-
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`

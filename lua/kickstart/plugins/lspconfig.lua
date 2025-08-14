@@ -179,7 +179,13 @@ return {
       local servers = {
         -- clangd = {},
         delve = {},
-        gopls = {},
+        gopls = {
+          settings = {
+            gopls = {
+              buildFlags = { '-tags=integration' },
+            },
+          },
+        },
         gofumpt = {},
         goimports = {},
         pyright = {},
